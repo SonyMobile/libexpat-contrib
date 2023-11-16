@@ -2899,6 +2899,11 @@ START_TEST(test_buffer_can_grow_to_max) {
     if (s != XML_STATUS_OK)
       xml_failure(parser);
 
+    // Make a few smaller attempts first. This makes it easier to see if the
+    // test is failing on very low sizes.
+    assert_true(XML_GetBuffer(parser, maxbuf / 4) != NULL);
+    assert_true(XML_GetBuffer(parser, maxbuf / 2) != NULL);
+    assert_true(XML_GetBuffer(parser, maxbuf / 2 + maxbuf / 4) != NULL);
     // XML_CONTEXT_BYTES of the prefix may remain in the buffer;
     // subtracting the whole prefix is easiest, and close enough.
     assert_true(XML_GetBuffer(parser, maxbuf - prefix_len) != NULL);
