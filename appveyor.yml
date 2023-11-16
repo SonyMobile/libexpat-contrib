@@ -65,18 +65,6 @@ environment:
       EXPAT_DLL: libexpatwd.dll
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
-    # Visual Studio 2017 x64
-    - GENERATOR: Visual Studio 15 2017 Win64
-      PLATFORM: x64
-      EXPAT_DLL: libexpatd.dll
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-
-    # Visual Studio 2017 x64 XML_UNICODE_WCHAR_T
-    - GENERATOR: Visual Studio 15 2017 Win64
-      PLATFORM: x64
-      CMAKE_ARGS: -DEXPAT_CHAR_TYPE=wchar_t
-      EXPAT_DLL: libexpatwd.dll
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
     # Visual Studio 2019 Win32
     - GENERATOR: Visual Studio 16 2019
@@ -92,18 +80,6 @@ environment:
       EXPAT_DLL: libexpatwd.dll
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
 
-    # Visual Studio 2019 x64
-    - GENERATOR: Visual Studio 16 2019
-      PLATFORM: x64
-      EXPAT_DLL: libexpatd.dll
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
-
-    # Visual Studio 2019 x64 XML_UNICODE_WCHAR_T
-    - GENERATOR: Visual Studio 16 2019
-      PLATFORM: x64
-      CMAKE_ARGS: -DEXPAT_CHAR_TYPE=wchar_t
-      EXPAT_DLL: libexpatwd.dll
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
 
     # Visual Studio 2022 Win32
     - GENERATOR: Visual Studio 17 2022
